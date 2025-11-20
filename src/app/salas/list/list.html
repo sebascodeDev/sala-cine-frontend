@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-bold">Salas</h2>
+    <a routerLink="/salas/nuevo" class="btn btn-primary">Nueva Sala</a>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="table w-full">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Capacidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sala of salas">
+          <td>{{ sala.id }}</td>
+          <td>{{ sala.nombre }}</td>
+          <td>{{ sala.capacidad }}</td>
+          <td>
+            <a [routerLink]="['/salas', sala.id]" class="btn btn-sm btn-ghost">Editar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
