@@ -10,9 +10,10 @@ interface Sala {
 
 @Component({
   selector: 'app-list',
+  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './list.html',
-  styleUrl: './list.css',
+  styleUrls: ['./list.css'],
 })
 export class List {
   salas: Sala[] = [
