@@ -1,6 +1,8 @@
 <div class="container">
   <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+  <!-- Statistics Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
     <div class="card bg-base-100 shadow-md">
       <div class="card-body">
         <h2 class="card-title text-lg">Total Salas</h2>
@@ -19,5 +21,18 @@
         <p class="text-4xl font-bold text-info">{{ totalPeliculas }}</p>
       </div>
     </div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <a routerLink="/peliculas" class="btn btn-primary w-full">
+      <span class="text-lg">🎬 Películas</span>
+    </a>
+    <a routerLink="/salas" class="btn btn-secondary w-full">
+      <span class="text-lg">🏠 Salas</span>
+    </a>
+    <a routerLink="/asignaciones" class="btn btn-accent w-full">
+      <span class="text-lg">🎫 Asignaciones</span>
+    </a>
   </div>
 </div>
