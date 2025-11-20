@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-asignar',
+  standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './asignar.html',
-  styleUrl: './asignar.css',
+  styleUrls: ['./asignar.css'],
 })
 export class Asignar {
   pelicula = '';
