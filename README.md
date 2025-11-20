@@ -1,59 +1,146 @@
-# SalaCineFrontend
+# Sala Cine - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+Aplicación web para la gestión de salas de cine desarrollada con **Angular 20**, **Tailwind CSS** y **DaisyUI**.
 
-## Development server
+**Autor:** Sebastian Valarezo
 
-To start a local development server, run:
+## 📋 Características
 
+- ✅ **Login** con credenciales por defecto (admin/admin)
+- ✅ **Dashboard** con indicadores de:
+  - Total de salas de cine
+  - Salas disponibles
+  - Total de películas
+- ✅ **Gestión de Películas** (crear, listar, editar)
+- ✅ **Gestión de Salas** (crear, listar, editar)
+- ✅ **Asignación de Películas a Salas**
+- ✅ **Menú de navegación** integrado
+- ✅ **Diseño responsivo** con Tailwind CSS + DaisyUI
+
+## 🛠️ Requisitos Previos
+
+- Node.js >= 20.x
+- npm >= 11.x
+- Angular CLI >= 20.x
+
+## 📦 Instalación
+
+### 1. Clonar el repositorio
 ```bash
-ng serve
+git clone https://github.com/tu-usuario/sala-cine-frontend.git
+cd sala-cine-frontend
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+### 2. Instalar dependencias
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 3. Configurar variables de entorno (opcional)
+Si necesitas conectarte a un API backend, crea un archivo `src/environments/environment.ts`:
 
-```bash
-ng generate --help
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:5000/api'
+};
 ```
 
-## Building
+## 🚀 Uso
 
-To build the project run:
-
+### Iniciar el servidor de desarrollo
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+La aplicación estará disponible en `http://localhost:4200/`
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+### Construir para producción
 ```bash
-ng test
+npm build
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+### Ejecutar pruebas
 ```bash
-ng e2e
+npm test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🔐 Credenciales por Defecto
 
-## Additional Resources
+Para acceder a la aplicación, utiliza:
+- **Usuario:** `admin`
+- **Contraseña:** `admin`
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── auth/                 # Módulo de autenticación
+│   │   └── login/            # Componente de login
+│   ├── dashboard/            # Módulo de dashboard
+│   │   └── dashboard/        # Componente principal
+│   ├── peliculas/            # Módulo de películas
+│   │   ├── list/             # Listado de películas
+│   │   └── edit/             # Edición de película
+│   ├── salas/                # Módulo de salas
+│   │   ├── list/             # Listado de salas
+│   │   └── edit/             # Edición de sala
+│   ├── asignaciones/         # Módulo de asignaciones
+│   │   └── asignar/          # Asignación de películas a salas
+│   ├── app.ts               # Componente raíz
+│   ├── app.routes.ts        # Rutas principales
+│   └── app.config.ts        # Configuración de la aplicación
+├── styles.css               # Estilos globales
+└── index.html              # Archivo HTML principal
+```
+
+## 🎨 Personalización
+
+### Temas de DaisyUI
+Para cambiar el tema, modifica `tailwind.config.cjs`:
+
+```javascript
+daisyui: {
+  themes: ['light', 'dark']
+}
+```
+
+## 📝 Scripts Disponibles
+
+| Script | Descripción |
+|--------|------------|
+| `npm start` | Inicia el servidor de desarrollo |
+| `npm build` | Construye la aplicación para producción |
+| `npm test` | Ejecuta las pruebas unitarias |
+
+## 🔄 Integración con Backend
+
+Este frontend está diseñado para trabajar con un backend .NET (API REST).
+
+## 🐛 Solución de Problemas
+
+### Puerto 4200 ya está en uso
+```bash
+ng serve --port 4300
+```
+
+### Errores de dependencias
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+## 📚 Recursos
+
+- [Documentación de Angular](https://angular.dev)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [DaisyUI Components](https://daisyui.com/components/)
+
+## 👤 Autor
+
+**Sebastian Valarezo**
+
+---
+
+**Última actualización:** Noviembre 2025

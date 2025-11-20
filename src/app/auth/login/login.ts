@@ -14,7 +14,7 @@ export class Login {
   password = '';
   error = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   login() {
     if (this.username === 'admin' && this.password === 'admin') {

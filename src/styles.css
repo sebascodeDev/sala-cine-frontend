@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body { @apply bg-base-100 min-h-screen; }
+body {
+  @apply bg-base-100 min-h-screen;
+}
 
-.container { @apply mx-auto p-4; }
+.container {
+  @apply mx-auto p-4;
+}
