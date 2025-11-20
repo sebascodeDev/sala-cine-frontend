@@ -1,0 +1,33 @@
+<div class="container max-w-md">
+  <h2 class="text-2xl font-bold mb-6">Asignar Película a Sala</h2>
+  <form>
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Película</span>
+      </label>
+      <select [(ngModel)]="pelicula" name="pelicula" class="select select-bordered">
+        <option value="">Seleccionar película...</option>
+        <option *ngFor="let p of peliculas" [value]="p">{{ p }}</option>
+      </select>
+    </div>
+    <div class="form-control mt-4">
+      <label class="label">
+        <span class="label-text">Sala</span>
+      </label>
+      <select [(ngModel)]="sala" name="sala" class="select select-bordered">
+        <option value="">Seleccionar sala...</option>
+        <option *ngFor="let s of salas" [value]="s">{{ s }}</option>
+      </select>
+    </div>
+    <div class="form-control mt-4">
+      <label class="label">
+        <span class="label-text">Fecha de Función</span>
+      </label>
+      <input [(ngModel)]="fecha" name="fecha" type="date" class="input input-bordered" />
+    </div>
+    <div class="form-control mt-6 flex flex-row gap-2">
+      <button (click)="asignar()" type="button" class="btn btn-primary flex-1">Asignar</button>
+      <button type="reset" class="btn btn-ghost flex-1">Limpiar</button>
+    </div>
+  </form>
+</div>
