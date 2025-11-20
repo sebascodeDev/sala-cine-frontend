@@ -1,0 +1,21 @@
+<div class="container max-w-md">
+  <h2 class="text-2xl font-bold mb-6">Editar Película</h2>
+  <form>
+    <div class="form-control">
+      <label class="label">
+        <span class="label-text">Título</span>
+      </label>
+      <input [(ngModel)]="titulo" name="titulo" type="text" class="input input-bordered" />
+    </div>
+    <div class="form-control mt-4">
+      <label class="label">
+        <span class="label-text">Duración (minutos)</span>
+      </label>
+      <input [(ngModel)]="duracion" name="duracion" type="number" class="input input-bordered" />
+    </div>
+    <div class="form-control mt-6 flex flex-row gap-2">
+      <button (click)="guardar()" type="button" class="btn btn-primary flex-1">Guardar</button>
+      <a routerLink="/peliculas" class="btn btn-ghost flex-1">Cancelar</a>
+    </div>
+  </form>
+</div>

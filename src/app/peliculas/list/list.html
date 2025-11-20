@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="flex items-center justify-between mb-4">
+    <h2 class="text-2xl font-bold">Películas</h2>
+    <a routerLink="/peliculas/nuevo" class="btn btn-primary">Nueva Película</a>
+  </div>
+  <div class="overflow-x-auto">
+    <table class="table w-full">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Duración (min)</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pelicula of peliculas">
+          <td>{{ pelicula.id }}</td>
+          <td>{{ pelicula.titulo }}</td>
+          <td>{{ pelicula.duracion }}</td>
+          <td>
+            <a [routerLink]="['/peliculas', pelicula.id]" class="btn btn-sm btn-ghost">Editar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
