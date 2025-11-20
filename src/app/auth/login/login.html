@@ -1,0 +1,38 @@
+<div class="min-h-screen flex items-center justify-center bg-base-200">
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card-body">
+      <h2 class="card-title mb-4">Ingreso</h2>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Usuario</span>
+        </label>
+        <input
+          [(ngModel)]="username"
+          type="text"
+          placeholder="admin"
+          class="input input-bordered"
+        />
+      </div>
+      <div class="form-control mt-4">
+        <label class="label">
+          <span class="label-text">Contraseña</span>
+        </label>
+        <input
+          [(ngModel)]="password"
+          type="password"
+          placeholder="••••••••"
+          class="input input-bordered"
+        />
+      </div>
+      <div *ngIf="error" class="alert alert-error mt-4">
+        <span>{{ error }}</span>
+      </div>
+      <div class="card-actions justify-end mt-6">
+        <button (click)="login()" class="btn btn-primary">Ingresar</button>
+      </div>
+      <p class="text-xs text-center text-gray-500 mt-4">
+        Credenciales por defecto: <strong>admin / admin</strong>
+      </p>
+    </div>
+  </div>
+</div>
