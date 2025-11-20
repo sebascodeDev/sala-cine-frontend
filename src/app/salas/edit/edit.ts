@@ -5,9 +5,10 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
+  standalone: true,
   imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './edit.html',
-  styleUrl: './edit.css',
+  styleUrls: ['./edit.css'],
 })
 export class Edit {
   nombre = '';
